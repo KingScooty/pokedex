@@ -10,7 +10,7 @@ export default (props) => {
     <div className="pokedex">
         <div className="panel left-panel">
             <div className="pokemon-name screen">{props.data.name}<span className="name-no">no. {props.data.id}</span></div>
-            <MainPokemonSpriteContainer id={props.data.id} />
+            <MainPokemonSpriteContainer data={props.data.sprites} />
             <div className="pokemon-description screen">A strange seed was
                 planted on its
                 back at birth. The plant sprouts
@@ -123,7 +123,7 @@ export default (props) => {
             </div>
             <div className="panel-row controls">
                 <div className="button" onClick={props.handleDecrement}/>
-                <div><input type="number" className="screen num-input" placeholder="1"/>
+                <div><input type="number" className="screen num-input" placeholder={props.data.id}/>
                     <div className="submit"/>
                 </div>
                 <div className="button" onClick={props.handleIncrement}/>

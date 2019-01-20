@@ -6,7 +6,7 @@ import PokemonSprite from './PokemonSprite';
 
 const MainPokemonSprite = (props) => (
     <div>
-        <PokemonSprite id={props.id} />
+        <PokemonSprite imgSrc={props.imgSrc} />
         <div className="sprite-controls">
             <div className="sprite-control sprite-controls-gender "><i className="fas fa-venus"/></div>
             <div className="sprite-control sprite-controls-shiny "><span>shiny</span></div>
@@ -16,7 +16,7 @@ const MainPokemonSprite = (props) => (
 )
 
 MainPokemonSprite.defaultProps = {
-    id: 1
+    imgSrc: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png'
 };
 
 export default MainPokemonSprite;

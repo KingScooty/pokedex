@@ -19,14 +19,14 @@ const PokemonSprite = (props) => {
     //TODO: image url builder probably necessary
 
     return <img
-        src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${props.id}.png`}
+        src={props.imgSrc}
         alt="pokemon"
         className={`pokemon-sprite ${props.size}`}
     />
 };
 
 PokemonSprite.defaultProps = {
-    id: 1
+    imgSrc: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png'
 };
 
 export default PokemonSprite;
