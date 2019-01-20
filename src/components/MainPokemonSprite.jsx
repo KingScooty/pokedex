@@ -8,9 +8,9 @@ const MainPokemonSprite = (props) => (
     <div>
         <PokemonSprite imgSrc={props.imgSrc} />
         <div className="sprite-controls">
-            <div className="sprite-control sprite-controls-gender "><i className="fas fa-venus"/></div>
-            <div className="sprite-control sprite-controls-shiny "><span>shiny</span></div>
-            <div className="sprite-control sprite-controls-rotate "><i className="fas fa-undo"/></div>
+            <div className="sprite-control sprite-controls-gender " onClick={props.handleToggleFemale}><i className="fas fa-venus"/></div>
+            <div className="sprite-control sprite-controls-shiny " onClick={props.handleToggleShiny}><span>shiny</span></div>
+            <div className="sprite-control sprite-controls-rotate " onClick={props.handleToggleBack}><i className="fas fa-undo"/></div>
         </div>
     </div>
 )

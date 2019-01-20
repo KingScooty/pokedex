@@ -48,7 +48,12 @@ class MainPokemonSpriteContainer extends React.Component {
 
     render() {
         const imgSrc = this.props.data[this.buildSpriteKey()];
-        return <MainPokemonSprite imgSrc={imgSrc} />
+        return <MainPokemonSprite
+            imgSrc={imgSrc}
+            handleToggleShiny={this.handleToggleShiny}
+            handleToggleBack={this.handleToggleBack}
+            handleToggleFemale={this.handleToggleFemale}
+        />
     }
 }
 
