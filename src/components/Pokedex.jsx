@@ -123,7 +123,7 @@ export default (props) => {
             </div>
             <div className="panel-row controls">
                 <div className="button" onClick={props.handleDecrement}/>
-                <div><input type="number" className="screen num-input" placeholder={props.data.id}/>
+                <div><input type="number" className="screen num-input" placeholder={props.index}/>
                     <div className="submit"/>
                 </div>
                 <div className="button" onClick={props.handleIncrement}/>

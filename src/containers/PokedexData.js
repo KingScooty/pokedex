@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import { setupCache } from 'axios-cache-adapter';
+import _debounce from 'lodash/debounce';
 
 import Pokedex from '../components/Pokedex';
 
@@ -55,19 +56,24 @@ class PokedexData extends React.Component {
         console.log(data);
     };
 
+    debouncedFetch = _debounce(async () => {
+        await this.fetchData(this.state.index);
+    }, 200);
+
     async componentDidMount() {
         await this.fetchData(this.state.index);
     }
 
-    async componentDidUpdate(prevProps, prevState, snapshot) {
+    componentDidUpdate(prevProps, prevState) {
         if (this.state.index !== prevState.index) {
-            await this.fetchData(this.state.index);
+            this.debouncedFetch();
         }
     }
 
     render() {
         return (
             <Pokedex
+                index={this.state.index}
                 data={this.state.data}
                 handleIncrement={this.handleIncrement}
                 handleDecrement={this.handleDecrement}
