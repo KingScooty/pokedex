@@ -1,3 +1,13 @@
+## Pokedex
+
+Heavily inspired by Eric Varela's React Pokedex on CodePen (https://codepen.io/siliconunicorn/pen/VqoxXP). Which was posted on Reddit as a way for Eric to learn React.
+
+I really liked the idea, and there's a few things i'd like to try out myself: API caching, React Hooks, css modules/styled components etc. So i thought i'd take the Markup and CSS taken from there (as a base) and try a few things out myself.
+
+This is just a place for me to tinker with a few concepts i haven't had a chance to play with yet.
+
+Big thanks goes to Eric for the idea (and the HTML/CSS!! :tada:) 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
