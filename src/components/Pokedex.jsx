@@ -2,6 +2,8 @@ import React from 'react';
 
 import './pokedex.css';
 
+import ElementTypes from '../containers/ElementTypes';
+
 export default (props) => {
     return (
     <div className="pokedex">
@@ -56,8 +58,7 @@ export default (props) => {
                 <div className="type-list">
                     <div className="panel-header">Types</div>
                     <div className="type-box">
-                        <div className="type poison">poison</div>
-                        <div className="type grass">grass</div>
+                        <ElementTypes types={props.data.types} />
                     </div>
                 </div>
             </div>

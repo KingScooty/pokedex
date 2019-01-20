@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { setupCache } from 'axios-cache-adapter';
 
-import Pokedex from '../components/pokedex';
+import Pokedex from '../components/Pokedex';
 
 const POKEDEX_API = 'https://pokeapi.co/api/v2/pokemon';
 
@@ -51,6 +51,8 @@ export default class PokedexData extends React.Component {
         this.setState({
             data: data
         });
+
+        console.log(data);
     };
 
     async componentDidMount() {
