@@ -3,20 +3,14 @@ import React from 'react';
 import './pokedex.css';
 
 import ElementTypes from '../containers/ElementTypes';
+import MainPokemonSpriteContainer from '../containers/MainPokemonSpriteContainer';
 
 export default (props) => {
     return (
     <div className="pokedex">
         <div className="panel left-panel">
             <div className="pokemon-name screen">{props.data.name}<span className="name-no">no. {props.data.id}</span></div>
-            <div><img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="pokemon"
-                      className="pokemon-sprite"/>
-                <div className="sprite-controls">
-                    <div className="sprite-control sprite-controls-gender "><i className="fas fa-venus"/></div>
-                    <div className="sprite-control sprite-controls-shiny "><span>shiny</span></div>
-                    <div className="sprite-control sprite-controls-rotate "><i className="fas fa-undo"/></div>
-                </div>
-            </div>
+            <MainPokemonSpriteContainer id={props.data.id} />
             <div className="pokemon-description screen">A strange seed was
                 planted on its
                 back at birth. The plant sprouts

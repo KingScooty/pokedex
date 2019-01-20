@@ -15,7 +15,7 @@ const api = axios.create({
     adpater: cache.adapter
 });
 
-export default class PokedexData extends React.Component {
+class PokedexData extends React.Component {
 
     state = {
         index: 1,
@@ -75,3 +75,5 @@ export default class PokedexData extends React.Component {
         )
     }
 }
+
+export default PokedexData;

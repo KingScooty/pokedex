@@ -21,6 +21,7 @@ ElementTypes.defaultProps = {
 };
 
 ElementTypes.propTypes = {
+    //TODO: describe shape better
     types: PropTypes.array
 };
 
